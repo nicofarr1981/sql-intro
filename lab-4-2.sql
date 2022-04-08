@@ -24,4 +24,16 @@
 -- | Billy      | Hamilton  |
 -- | Ian        | Happ      |
 
+select
+    p.first_name, p.last_name
+from
+    players p
+,   stats s
+,   teams t
+where 
+    p.id = s.player_id
+and t.id = s.team_id
+and t.name = 'Chicago Cubs'
+and t.year = 2020
+;
 
